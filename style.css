@@ -1,0 +1,195 @@
+body {
+    background-color: #FEFAE0;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+p {
+    color: #023047;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    margin:0 auto;
+}
+
+@media (min-width: 600px) {
+    .container { 
+        display: grid;
+        grid-template-columns: 1fr 80px 2fr; 
+    }
+    
+    .projects-plane {
+        height: 100vh;
+    }
+
+    .projects-plane p {
+        transform: rotate(-90deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .container { 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info .copyright {
+        visibility: hidden;
+    }
+
+    .info .logo {
+        padding-bottom: 30px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5%;
+    max-height: 95vh;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 0;
+}
+
+.info .copyright {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.info .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info .about .btn {
+    background: #F07167;
+    border-radius: 5px;
+    width: 45%;
+    height: 45px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.info .about .title {
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.info .about .title .developers {
+    color: #606C38;
+}
+
+.info .about .title .looking {
+    color: #F07167;
+}
+
+.info .about .text {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-weight: 300;
+}
+
+.info .logo {
+    margin: 0;
+    padding-top: 0;
+}
+
+.info .logo .dev {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 55px;
+    color: #283618;
+    margin: 0;
+}
+
+.info .logo .dogs {
+    font-style: italic;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 49px;
+    color: #606C38;
+    margin-top: -20px;
+    margin-bottom: 0px;
+}
+
+.projects-plane {
+    background-color: #F0ECD4;
+    box-shadow: 0px 0px 10px #cbc8c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    margin: 0;
+    z-index: 11;
+}
+
+.projects-plane p {
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 0.5em;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    z-index: 10;
+}
+
+.projects .project {
+    height: 50vh;
+}
+
+.projects .project a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.projects .project:nth-child(4n+1){
+    background: #FFF8CA;
+}
+.projects .project:nth-child(4n+2){
+    background: #F6F1CA;
+}
+.projects .project:nth-child(4n+3){
+    background: #FEFAE0;
+}
+
+.projects .project:nth-child(4n){
+    background: #FFF7C6;
+}
+
+.projects .project img {
+    height: auto;
+    width: 250px;
+    transition: 0.5s ease-in-out;
+}
+
+.projects .project:hover img{
+    transform: scale(1.1);
+}
