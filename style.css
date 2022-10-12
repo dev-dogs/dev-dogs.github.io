@@ -155,6 +155,8 @@ p {
 
 .projects {
     display: grid;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
     grid-template-columns: repeat(2, 1fr);
     z-index: 10;
 }
